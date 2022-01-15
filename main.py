@@ -2,7 +2,12 @@ print("Salut,bun venit la configurarea propriului tau design,te rugam sa alegi d
 print("1.-------")
 print("2.+++++++")
 print("3.✄✄✄✄✄✄✄")
+print("4.♠ si ✑")
 sel = input("Scrie numarul variantei dorite: ")
+
+if sel != "1" and sel != "2" and sel != "3" and sel != "4":
+    print("EROARE-argumente invalide")
+    sel = input("Scrie numarul variantei dorite: ")
 
 #default funct
 def mh1(x, y, z):
@@ -24,6 +29,14 @@ def mh3(d, e, v):
     print("Portal:", v, "|")
     print("✄✄✄✄✄✄✄✄✄✄✄✄✄✄✄✄✄")
 
+def mh4(l, m, n):
+    print("♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠")
+    print("✑ IP:", l, "|")
+    print("✑ Store:", m, "|")
+    print("✑ Portal:", n, "|")
+    print("♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠")
+
+
 #def print statement---mh(input("Alegeti ip-ul"), input("alegeti store ul:"), input("alegeti portalul"))
 if sel == "1":
     mh1(input("Alegeti ip-ul: "), input("alegeti store ul: "), input("alegeti portalul: "))
@@ -31,6 +44,8 @@ elif sel == "2":
     mh2(input("Alegeti ip-ul: "), input("alegeti store ul: "), input("alegeti portalul: "))
 elif sel == "3":
     mh3(input("Alegeti ip-ul: "), input("alegeti store ul: "), input("alegeti portalul: "))
+elif sel == "4":
+    mh4(input("Alegeti ip-ul: "), input("alegeti store ul: "), input("alegeti portalul: "))
 
 print("Iti place acest design?(da/nu)")
 var = input()
